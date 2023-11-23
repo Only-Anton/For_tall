@@ -1,6 +1,8 @@
 ﻿int n = 6;
 int [] arr = new int [n];
 int i = 0;
+Console.WriteLine("Start");
+Thread.Sleep(1000);
 while (i < n)
 {
     arr[i] = new Random().Next(0, 9);
@@ -20,7 +22,7 @@ while (i < n - 1)
        // if (i == 0) tochka = 0;
         Console.SetCursorPosition(tochka, Console.CursorTop);
         Console.Write($"{arr[i]}");
-        Thread.Sleep(1000);
+        Thread.Sleep(500);
         Console.SetCursorPosition(tochka+2, Console.CursorTop);
         Console.Write($"{arr[i+1]}");
         Thread.Sleep(1000);
@@ -28,6 +30,9 @@ while (i < n - 1)
     }    
     else i+=1;
 }
+Console.WriteLine();
+Thread.Sleep(1000);
+Console.Write("Finish");
 
 // 012345678910111213141516
 // 0 1 2 3 4 5   6   7    8
